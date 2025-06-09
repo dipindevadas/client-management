@@ -124,7 +124,7 @@ export function TableDemo({ data }: TableProps) {
       {
         viewPopupOpen && (
           <Modal setViewPopupOpen={setViewPopupOpen}>
-            <UserDetails usersData={selectedClient ?? undefined} setViewPopupOpen={setViewPopupOpen}/>
+            {selectedClient && <UserDetails setViewPopupOpen={setViewPopupOpen} usersData={selectedClient} />}
           </Modal>
         )
       }
